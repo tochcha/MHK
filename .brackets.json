@@ -1,0 +1,18 @@
+{
+    "sass.enabled": false,
+    "sass.compiler": "libsass",
+    "path": {
+        "css/main.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "imagePath": null,
+                "sourceComments": false,
+                "outputStyle": "nested"
+            },
+            "linting.collapsed": false,
+            "brackets-icons.iconset": "ionicons",
+            "brackets-indent-guides.enabled": false,
+            "themes.theme": "dark-theme"
+        }
+    }
+}
