@@ -291,7 +291,7 @@ b {
 			a {
 				font: 19px/65px $base-font;
 				color: #fefefe;
-				transition: .3s;
+				/*transition: .3s;*/
 				padding: 0 14px 0 12px;
 				display: block;
 				position: relative;
@@ -304,19 +304,20 @@ b {
 				width: auto;
 				min-width: 100%;
 				position: absolute;
-				top: 0;
+				top: 100%;
 				left: 0;
 				background-color: #127b8b;
 				visibility: hidden;
 				opacity: 0;
 				transition: .3s;
-				overflow: hidden;
+				/*overflow: hidden;*/
 				li {
 					text-align: left;
 					display: block;
 					a {
 						font: 16px/32px $base-font;
 						white-space: nowrap;
+						text-transform: none;
 					}
 					&:last-child {
 						a {
@@ -336,13 +337,33 @@ b {
 				ul {
 					visibility: visible;
 					opacity: 1;
-					top: 100%;
 					li {
 						a {
 							color: #fefefe;
 							background-color: $link;
-							&:hover {
+						}
+						ul {
+							visibility: hidden;
+							opacity: 0;
+							left:100%;
+							top:0;
+							width: auto;
+						}
+						&:hover {
+							a {
 								background-color: $link-hover;
+							}
+							ul {
+								opacity: 1;
+								visibility: visible;
+								li {
+									a {
+										background-color: $link;
+										&:hover {
+											background-color: $link-hover !important;
+										}
+									}
+								}
 							}
 						}
 					}
@@ -376,14 +397,14 @@ footer {
 				padding: 0;
 				li {
 					display: inline-block;
-					padding: 0 5px 0 8px;
-					background: url(../images/separ.png) no-repeat left;
+					padding: 8px 5px 12px 8px;
+					background: url(../images/separ.png) no-repeat left 15px;
 					&:first-child {
 						background: none;
 						padding-left: 0;
 					}
 					a {
-						font: 13px/42px $base-font;
+						font: 13px/18px Arial;
 						text-transform: uppercase;
 					}
 				}
@@ -437,7 +458,7 @@ footer {
 		a {
 			display: inline-block;
 			height: 35px;
-			font: 20px/33px $base-font;
+			font: 20px/35px Arial;
 			color: #fefefe;
 			text-align: center;
 			border-radius: 10px;
@@ -481,13 +502,14 @@ footer {
 	padding-bottom: 19px;
 	a {
 		display: block;
-		font: 15px/37px $base-font;
+		font: 14px/39px Arial;
 		color: #fefefe;
 		background-color: #127b8b;
 		border-radius: 10px;
 		text-align: center;
 		text-transform: uppercase;
 		transition: .3s;
+		height: 37px;
 		&:hover {
 			background-color: #af1326;
 			text-decoration: none;
@@ -514,6 +536,10 @@ footer {
 				line-height: 32px;
 				border-radius: 10px;
 				transition: .3s;
+				i {
+					font-size: 25px;
+					line-height: 35px;
+				}
 				&:hover {
 					background-color: #751d1a;
 				}
@@ -566,7 +592,7 @@ header {
 	.info {
 		float: right;
 		width: 436px;
-		margin-top: -7px;
+		margin-top: -5px;
 	}
 	h2 {
 		font: 28px $base-font-bold;
@@ -613,7 +639,7 @@ header {
 			text-align: center;
 			text-transform: uppercase;
 			color: #fefefe;
-			font: 27px/42px $base-font-bold;
+			font:bold 25px/44px Arial;
 			background-color: #ba2a23;
 			border-radius: 10px;
 			transition: .3s;
@@ -825,7 +851,7 @@ header {
 			transition: .3s;
 			border-radius: 8px;
 			background-color: #127b8b;
-			font: 15px/37px $base-font-bold;
+			font:bold 14px/38px Arial;
 			text-transform: uppercase;
 			padding: 0 32px;
 			&:hover {
